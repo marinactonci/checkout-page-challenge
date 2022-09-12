@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Checkout Page</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <div class="main">
+        <div class="cart-container">
+            <div class="item">
+                <img src="images/photo1.png" alt="Vintage Backbag">
+                <div class="info-and-amount-container">
+                    <div class="info">
+                        <h2>Vintage Backbag</h2>
+                        <div>
+                            <p class="discout-price">$54.99</p>
+                            <p class="actual-price">$94.99</p>
+                        </div>
+                    </div>
+                    <div class="amount-input">
+                        <div class="input-button" id="first-minus"><i class="fa-solid fa-minus"></i></div>
+                        <p class="value" id="first-value">1</p>
+                        <div class="input-button" id="first-plus"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item second-item">
+                <img src="images/photo2.png" alt="Vintage Backbag">
+                <div class="info-and-amount-container">
+                    <div class="info">
+                        <h2>Levi Shoes</h2>
+                        <div>
+                            <p class="discout-price">$74.99</p>
+                            <p class="actual-price">$124.99</p>
+                        </div>
+                    </div>
+                    <div class="amount-input">
+                        <div class="input-button" id="second-minus"><i class="fa-solid fa-minus"></i></div>
+                        <p class="value" id="second-value">1</p>
+                        <div class="input-button" id="second-plus"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="prices-container shipping-prices">
+                <h3>Shipping</h3>
+                <p>$19</p>
+            </div>
+            <hr>
+            <div class="prices-container">
+                <h3>Total</h3>
+                <p id="total-price">$148.98</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <form name="myForm" method="get" onsubmit="submitForm(this)">
+                <h2 class="contact-info form-header">Contact information</h2>
+                <label for="email">Email</label><br>
+                <i class="fa-solid fa-envelope descriptive-icon"></i>
+                <input type="text" id="email" name="email" placeholder="Enter your email..." required><br>
+                <label for="phone">Phone</label><br>
+                <i class="fa-solid fa-phone descriptive-icon"></i>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone..." required><br>
+                <h2 class="shipping-address form-header">Shipping address</h2>
+                <label for="full-name">Full name</label><br>
+                <i class="fa-solid fa-user descriptive-icon"></i>
+                <input type="text" id="full-name" name="full-name" placeholder="Your full name.." required><br>
+                <label for="address">Address</label><br>
+                <i class="fa-solid fa-house descriptive-icon"></i>
+                <input type="text" id="address" name="address" placeholder="Your address.." required><br>
+                <label for="city">City</label><br>
+                <i class="fa-solid fa-city descriptive-icon"></i>
+                <input type="text" id="city" name="city" placeholder="Your city.." required><br>
+                <div class="country-and-postal-code">
+                  <div class="country">
+                    <label for="country">Country</label><br>
+                    <i class="fa-solid fa-earth-europe descriptive-icon"></i>
+                    <select id="cars" name="cars" aria-placeholder="Your country.." required>
+                      <option value="default" class="default-option" disabled selected>Your country..</option>
+                      <option value="usa">USA</option>
+                      <option value="du">Germany</option>
+                      <option value="it">Italy</option>
+                      <option value="hr">Croatia</option>
+                    </select>
+                  </div>
+                  <div class="postal-code">
+                    <label for="postal-code">Postal code</label><br>
+                    <i class="fa-solid fa-envelopes-bulk descriptive-icon"></i>
+                    <input type="text" id="postal-code" name="postal-code" placeholder="Your postal code.." required><br>
+                  </div>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="checkbox" id="checkbox">
+                  <p class="checkbox-text">Save this information for next time</p>
+                </div>
+                <div class="button-container">
+                  <button type="submit">Continue</button>
+                </div>
+              </form>
+        </div>
+    </div>
+    <footer id="footer">
+        <p>created by <a href="https://devchallenges.io/portfolio/marinactonci" target="_blank"><strong>marinactonci</strong></a> - devChallenges.io</p>
+    </footer>
+</body>
+</html>
